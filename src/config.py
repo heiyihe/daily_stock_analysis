@@ -120,7 +120,7 @@ class Config:
     openai_base_url: Optional[str] = None  # 如: https://api.openai.com/v1
     openai_model: str = "gpt-4o-mini"  # OpenAI 兼容模型名称
     openai_vision_model: Optional[str] = None  # Deprecated: use VISION_MODEL instead
-    openai_temperature: float = 0.7  # OpenAI 温度参数（0.0-2.0，默认0.7）
+    openai_temperature: float = 0.2  # OpenAI 温度参数（0.0-2.0，默认0.7）
 
     # === Vision 配置 ===
     # VISION_MODEL: litellm model string used for image understanding calls.
@@ -584,7 +584,7 @@ class Config:
             ),  # noqa: E501
             openai_model=os.getenv('OPENAI_MODEL', 'gpt-4o-mini'),
             openai_vision_model=os.getenv('OPENAI_VISION_MODEL') or None,
-            openai_temperature=float(os.getenv('OPENAI_TEMPERATURE', '0.7')),
+            openai_temperature=float(os.getenv('OPENAI_TEMPERATURE', '0.2')),
             # Vision model: VISION_MODEL > OPENAI_VISION_MODEL (alias) > default
             vision_model=(
                 os.getenv('VISION_MODEL')

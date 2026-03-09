@@ -530,7 +530,7 @@ _FIELD_DEFINITIONS: Dict[str, Dict[str, Any]] = {
         "is_sensitive": False,
         "is_required": False,
         "is_editable": True,
-        "default_value": "0.7",
+        "default_value": "0.2",
         "options": [],
         "validation": {"min": 0.0, "max": 2.0},
         "display_order": 62,
